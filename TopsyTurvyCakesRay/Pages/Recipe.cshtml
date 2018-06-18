@@ -1,8 +1,7 @@
 ﻿@page "{id}"
 @{
     var id = long.Parse((string)RouteData.Values["id"]);
-    var recipiesService = new RecipesService();
-    var recipe = recipiesService.Find(id);
+    var recipe = RecipesService.Find(id);
 
     ViewData["Title"] = recipe.Name;
 }
